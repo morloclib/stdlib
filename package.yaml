@@ -1,0 +1,11 @@
+name: stdlib
+version: 0.1.0
+homepage: https://github.com/morloclib/stdlib
+synopsis: Wraps all stdlib modules
+description: A meta-module that imports and re-exports all stdlib modules
+category: language-base
+license: MIT
+author: "Zebulun Arendsee"
+maintainer: "z@morloc.io"
+github: https://github.com/morloclib/stdlib
+bug-reports: https://github.com/morloclib/stdlib

@@ -1,0 +1,31 @@
+module stdlib (*)
+
+import bits-cpp
+import bits-py
+import bits-r
+import char-cpp
+import char-py
+import char-r
+import map-cpp
+import map-py
+import map-r
+import math-cpp
+import math-py
+import math-r
+import maybe-cpp
+import maybe-py
+import maybe-r
+import random-cpp
+import random-py
+import random-r
+import root-cpp
+import root-py
+import root-r
+import set-cpp
+import set-py
+import set-r
+import shell-cpp
+import shell-py
+import text-cpp
+import text-py
+import text-r
