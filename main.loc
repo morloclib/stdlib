@@ -29,3 +29,9 @@ import shell-py
 import text-cpp
 import text-py
 import text-r
+import vector-cpp
+import vector-py
+import vector-r
+import tensor-cpp
+import tensor-py
+import tensor-r
