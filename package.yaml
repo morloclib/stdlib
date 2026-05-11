@@ -1,5 +1,5 @@
 name: stdlib
-version: 0.2.0
+version: 0.3.0
 homepage: https://github.com/morloclib/stdlib
 synopsis: Wraps all stdlib modules
 description: A meta-module re-exporting all stdlib modules
@@ -27,7 +27,7 @@ morloc-dependencies:
   - name: char-r
     git-hash: c5f3123ea1e137969a4a13facbd71caf6c7ef3d3
   - name: internal
-    git-hash: d6884ee2b973be8a6e11319c40f8cb5d054c4645
+    git-hash: 980868b699052aa1d2e7418082948d88b4d9775f
   - name: map
     git-hash: 4eb90bffc40dc50b6fc4c2b4adf750d0fcebbb7b
   - name: map-cpp
@@ -63,11 +63,11 @@ morloc-dependencies:
   - name: root
     git-hash: 5a058664a018d8627d77f152bf05fe75d37c2157
   - name: root-cpp
-    git-hash: 7dda0dddfb3153463f44e6e4fe99af6e52968db6
+    git-hash: 5a38b13be9bcb8ec64b6bc6e3a989cccc504e943
   - name: root-py
-    git-hash: e91c59b1401f98510d3198356e6c38736059288d
+    git-hash: 262d93d70d4d270785a7c666281889df8ee23911
   - name: root-r
-    git-hash: 4c5b31f6eabfb5c8e51e5c37a63add7a60f151d8
+    git-hash: 77422af6f29ee9ea9e8fe651e7289592516fd7bf
   - name: set
     git-hash: f638010fdce4930d88e6ee1ac67785002d34857b
   - name: set-cpp
