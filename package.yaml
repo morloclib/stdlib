@@ -1,5 +1,5 @@
 name: stdlib
-version: 0.3.0
+version: 0.4.0
 homepage: https://github.com/morloclib/stdlib
 synopsis: Wraps all stdlib modules
 description: A meta-module re-exporting all stdlib modules
@@ -45,29 +45,29 @@ morloc-dependencies:
   - name: math-r
     git-hash: 9d703b324a92f9766b9bccc8e15d9e453cc097e5
   - name: maybe
-    git-hash: a4f80d2548c81341ca503310af4a9d57c0f7bfa0
+    git-hash: fb4ba4fa7a02fb38146668b2f6be37222cc61b25
   - name: maybe-cpp
-    git-hash: 19854348292b0fa093223bd8dacb4b4969f2dc0c
+    git-hash: eb2340c1f3db88e709e72580feae19df4a746a8a
   - name: maybe-py
-    git-hash: d24578335c5f5c068be4d8e55f304964887fe3c1
+    git-hash: 63a1126ae95670afed2f17010a3f0c4ce58ade89
   - name: maybe-r
-    git-hash: 571e79e673875d48576ed0783bb1e53e2dba43d2
+    git-hash: b99ea61daad50deccea88b74b1cf6fa5ece5d203
   - name: random
-    git-hash: 92cf5e3781d9eb870bcb7376d80f64cf861dc01c
+    git-hash: fdbb5328d889bf9fc3b1f53a26fd87ebe320d064
   - name: random-cpp
-    git-hash: 325e4c51fc1bc09dab30e1815223b963a2a86186
+    git-hash: 1a04499e58135e88dc747d12285d86c43635f62d
   - name: random-py
-    git-hash: 34363c2cb3799dd2bb6aed5446d59afad4c06cee
+    git-hash: 185abbbcd6a56d2871dcd6929920266d63a4d37b
   - name: random-r
-    git-hash: 918dc98b537eaa5d719a5d161d03d44cba18e979
+    git-hash: a34da218fe858a2c3417c51c65fde4cfb4317806
   - name: root
-    git-hash: 5a058664a018d8627d77f152bf05fe75d37c2157
+    git-hash: c0ea80ac18009f29a054178e3d2ce6210ac888f4
   - name: root-cpp
-    git-hash: 5a38b13be9bcb8ec64b6bc6e3a989cccc504e943
+    git-hash: c9a285dc369f696748b3a580f4171f0cc69aa6c4
   - name: root-py
-    git-hash: 262d93d70d4d270785a7c666281889df8ee23911
+    git-hash: 79ae4f40cb27d77eb81aba60a070a86b47b1cbc5
   - name: root-r
-    git-hash: 77422af6f29ee9ea9e8fe651e7289592516fd7bf
+    git-hash: f0904f61299cd24f0e6396e59209ea353571194b
   - name: set
     git-hash: f638010fdce4930d88e6ee1ac67785002d34857b
   - name: set-cpp
@@ -83,7 +83,7 @@ morloc-dependencies:
   - name: shell-py
     git-hash: 66c20c8edf806f5d6ab86c7354b977904f71d674
   - name: table
-    git-hash: 3d2e2e64a9e22e720715cdf8f512c3d9cbf9aee3
+    git-hash: dae2dbd65a451e7baa9a0089a2b1a938b29a74d2
   - name: table-cpp
     git-hash: 32b412af444622c50007bb3871df43af8c0fd5c1
   - name: table-py
@@ -107,7 +107,7 @@ morloc-dependencies:
   - name: text-r
     git-hash: 8a2db364a62c6a8da810b5716c221af90bfd5e80
   - name: vector
-    git-hash: 9d6239081ee4791fff4429f26a87db8b51448dc3
+    git-hash: 7f88748f13de8d80b754f06dbae1b2f862cf7b76
   - name: vector-cpp
     git-hash: 255f0befdbc5b0a9e0bd6d4ec2e3b57fddadd888
   - name: vector-py
