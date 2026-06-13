@@ -1,5 +1,5 @@
 name: stdlib
-version: 0.4.0
+version: 0.6.0
 homepage: https://github.com/morloclib/stdlib
 synopsis: Wraps all stdlib modules
 description: A meta-module re-exporting all stdlib modules
@@ -61,13 +61,13 @@ morloc-dependencies:
   - name: random-r
     git-hash: a34da218fe858a2c3417c51c65fde4cfb4317806
   - name: root
-    git-hash: 0e57c657c8f7f61b9b1c1fa96ef48223e38ea2e8
+    git-hash: 028114a5ae1f0a59cdb4d1f517786bb870df4cac
   - name: root-cpp
-    git-hash: f210b2d7ce79793b7b39fcb072f900fa7098ff35
+    git-hash: 413fc010a9d61934cde0995cd07b1558d06c2d61
   - name: root-py
-    git-hash: d86ddb912562d3674e3f5d09a1de68063d89421b
+    git-hash: 8ff08fff3f349cbab05e318a4562032e61fd2de4
   - name: root-r
-    git-hash: dc8202a7b3eb7086b9c6b121a7832f129985fdf0
+    git-hash: 9161fe8a7aed855b7fc74bb28a8e9d2e5b886f11
   - name: set
     git-hash: f638010fdce4930d88e6ee1ac67785002d34857b
   - name: set-cpp
