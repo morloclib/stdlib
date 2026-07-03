@@ -1,5 +1,5 @@
 name: stdlib
-version: 0.6.0
+version: 0.7.0
 homepage: https://github.com/morloclib/stdlib
 synopsis: Wraps all stdlib modules
 description: A meta-module re-exporting all stdlib modules
@@ -27,15 +27,15 @@ morloc-dependencies:
   - name: char-r
     git-hash: c5f3123ea1e137969a4a13facbd71caf6c7ef3d3
   - name: internal
-    git-hash: 17a01e9d763ba976a97433dd0d88903c9f3bfe36
+    git-hash: 64c325b54cafaf64013df99b8f1b5aced9b6dae0
   - name: map
-    git-hash: 2d9252f2f3223f03046b5d6d1a30c33744d9bf53
+    git-hash: 26d2686a0bddc54b751221209ea0789214e2c289
   - name: map-cpp
-    git-hash: 4cc025e4209f52fcd3596d5215ca9f9cdfb5a7f1
+    git-hash: 4132cd7c707c28e6a61c6afdbff56f8aa6d0927a
   - name: map-py
-    git-hash: e63b46775aff980b1285187a2171e322e6ae184c
+    git-hash: e07e5d14e4a91f016bf25bcb725f576730597150
   - name: map-r
-    git-hash: a23c4b2b5d08e4282958086c2547191fefb5f685
+    git-hash: 47b66cc2290b0a9e911d5c473c0e504425ec9f45
   - name: math
     git-hash: c08d433425e01dae5dda4fddb74a36b011cd3d7c
   - name: math-cpp
@@ -61,21 +61,21 @@ morloc-dependencies:
   - name: random-r
     git-hash: a34da218fe858a2c3417c51c65fde4cfb4317806
   - name: root
-    git-hash: 028114a5ae1f0a59cdb4d1f517786bb870df4cac
+    git-hash: 25c7595a8c824983dc75f58e363ddb03baf22401
   - name: root-cpp
-    git-hash: 413fc010a9d61934cde0995cd07b1558d06c2d61
+    git-hash: 079d765a80903973999b7e00a81a800328b2fb07
   - name: root-py
-    git-hash: 8ff08fff3f349cbab05e318a4562032e61fd2de4
+    git-hash: d33c0dfc7a230e960342aa760e7b4e2af53fcc4d
   - name: root-r
-    git-hash: 9161fe8a7aed855b7fc74bb28a8e9d2e5b886f11
+    git-hash: e08d7cba8fe1421d7f1fb0df9792a196ef2c2004
   - name: set
-    git-hash: f638010fdce4930d88e6ee1ac67785002d34857b
+    git-hash: c146199ea5f094e385ad01ea48837c0ca2f97c11
   - name: set-cpp
-    git-hash: d9ed0610a42c687d1347ed24dc462d7b1405acc8
+    git-hash: 966bd1bd6f493dbcbb2681481b93c3ef123944d0
   - name: set-py
-    git-hash: 068ae9d1622bf0780c75acb69b49a30b474f28bf
+    git-hash: 80cef90641cd02e254cdc526455495f4ef52aaad
   - name: set-r
-    git-hash: da34a602c22333cfc9ab8d9075a328066dcf2682
+    git-hash: 7903f40d56cd9d92065d16a47290f00588a8ee8f
   - name: shell
     git-hash: e8f962d4ada6a2de9672514333019df6661b3fab
   - name: shell-cpp
@@ -93,7 +93,7 @@ morloc-dependencies:
   - name: tensor
     git-hash: 13f68b02a485f19f953ec40c3c1a637ee9b52eae
   - name: tensor-cpp
-    git-hash: f8d4971d1f16a42cec8ce9d1ff83b47444fbea4f
+    git-hash: f4df5a6908df423b0ea7206529efc3525282ab07
   - name: tensor-py
     git-hash: c0373471463961d61bb9945d212ea47c5ebcabae
   - name: tensor-r
