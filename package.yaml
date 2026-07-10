@@ -1,5 +1,5 @@
 name: stdlib
-version: 0.7.0
+version: 0.7.1
 homepage: https://github.com/morloclib/stdlib
 synopsis: Wraps all stdlib modules
 description: A meta-module re-exporting all stdlib modules
@@ -29,7 +29,7 @@ morloc-dependencies:
   - name: internal
     git-hash: 64c325b54cafaf64013df99b8f1b5aced9b6dae0
   - name: map
-    git-hash: 26d2686a0bddc54b751221209ea0789214e2c289
+    git-hash: 5c1f8c9e9c101bd2a954fa5b6053eb1a511efa4a
   - name: map-cpp
     git-hash: 4132cd7c707c28e6a61c6afdbff56f8aa6d0927a
   - name: map-py
@@ -67,9 +67,9 @@ morloc-dependencies:
   - name: root-py
     git-hash: d33c0dfc7a230e960342aa760e7b4e2af53fcc4d
   - name: root-r
-    git-hash: e08d7cba8fe1421d7f1fb0df9792a196ef2c2004
+    git-hash: cd0e9562896e688fb181ba84f32b56f5d9a14811
   - name: set
-    git-hash: c146199ea5f094e385ad01ea48837c0ca2f97c11
+    git-hash: 0e95776934d2f8395d4ae159f2940814f5482d59
   - name: set-cpp
     git-hash: 966bd1bd6f493dbcbb2681481b93c3ef123944d0
   - name: set-py
@@ -77,11 +77,11 @@ morloc-dependencies:
   - name: set-r
     git-hash: 7903f40d56cd9d92065d16a47290f00588a8ee8f
   - name: shell
-    git-hash: e8f962d4ada6a2de9672514333019df6661b3fab
+    git-hash: a03489f3a039f2d9f00d7c10ab73016e5c2bfa11
   - name: shell-cpp
-    git-hash: 97de18d4acb7cd9c814602daeebad0e4f8ca08e5
+    git-hash: 95089487cd66ddcd88a12bc8401f3039a4dbff05
   - name: shell-py
-    git-hash: 66c20c8edf806f5d6ab86c7354b977904f71d674
+    git-hash: 6ad01e25ab2b17e8bf731a86eda950aedfa08431
   - name: table
     git-hash: f7d5327d3460fba544b09e93e17871c488b47b31
   - name: table-cpp
