@@ -1,5 +1,5 @@
 name: stdlib
-version: 0.7.1
+version: 0.8.0
 homepage: https://github.com/morloclib/stdlib
 synopsis: Wraps all stdlib modules
 description: A meta-module re-exporting all stdlib modules
@@ -27,15 +27,15 @@ morloc-dependencies:
   - name: char-r
     git-hash: c5f3123ea1e137969a4a13facbd71caf6c7ef3d3
   - name: internal
-    git-hash: 64c325b54cafaf64013df99b8f1b5aced9b6dae0
+    git-hash: be05c717d7af48f8fc0d5057b85b3a2e3a2718da
   - name: map
-    git-hash: 5c1f8c9e9c101bd2a954fa5b6053eb1a511efa4a
+    git-hash: 21c314368fcd08bbf299be93ab35b6f062b57279
   - name: map-cpp
-    git-hash: 4132cd7c707c28e6a61c6afdbff56f8aa6d0927a
+    git-hash: c71da2a6a892961cdbc9fed7986c86f02d58f496
   - name: map-py
-    git-hash: e07e5d14e4a91f016bf25bcb725f576730597150
+    git-hash: b93e5af7859f3149c2286eb48794307a43553466
   - name: map-r
-    git-hash: 47b66cc2290b0a9e911d5c473c0e504425ec9f45
+    git-hash: 69810002be6b1b386e25afeae88a2c2809915a3f
   - name: math
     git-hash: c08d433425e01dae5dda4fddb74a36b011cd3d7c
   - name: math-cpp
@@ -61,13 +61,13 @@ morloc-dependencies:
   - name: random-r
     git-hash: a34da218fe858a2c3417c51c65fde4cfb4317806
   - name: root
-    git-hash: 25c7595a8c824983dc75f58e363ddb03baf22401
+    git-hash: 1d87956888108665a8b0a84a19e854ac8d7f5a08
   - name: root-cpp
-    git-hash: 079d765a80903973999b7e00a81a800328b2fb07
+    git-hash: 6c89c3630a286c77f17a85b1f5b191e38e85d197
   - name: root-py
-    git-hash: d33c0dfc7a230e960342aa760e7b4e2af53fcc4d
+    git-hash: c026c61cdada85947f3af804853cd8c33b5564bd
   - name: root-r
-    git-hash: cd0e9562896e688fb181ba84f32b56f5d9a14811
+    git-hash: 2efcb1603354fa8f6989fcbe8517708c0e8c42b5
   - name: set
     git-hash: 0e95776934d2f8395d4ae159f2940814f5482d59
   - name: set-cpp
