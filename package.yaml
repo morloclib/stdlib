@@ -1,5 +1,5 @@
 name: stdlib
-version: 0.8.0
+version: 0.9.0
 homepage: https://github.com/morloclib/stdlib
 synopsis: Wraps all stdlib modules
 description: A meta-module re-exporting all stdlib modules
@@ -13,23 +13,23 @@ morloc-dependencies:
   - name: bits
     git-hash: 3ce5cc2ae8673b3799d0f8dc942a9931e344c162
   - name: bits-cpp
-    git-hash: 4159e4daf9a6b7a845183eb88bf7a067deb9ddec
+    git-hash: 191ecfbfd96bede1aa2a375a49b2db9ef8b6714b
   - name: bits-py
-    git-hash: e0e15ccd27640b2c2060865cc03bfadaa468c799
+    git-hash: c88cce17a25cc03ec03bb6be0b89836166297b88
   - name: bits-r
-    git-hash: 3bc69a53b18de1a445e0e405a11ebac19baf8a8f
+    git-hash: 8aedd671203e27ba0b56725a6d9eacd88b9a6993
   - name: char
-    git-hash: c89874d3f538bafe5f8ff2657329d0c53e20f448
+    git-hash: 9794a02a3c1c8fa3289c5afb70bc246baf1959b5
   - name: char-cpp
     git-hash: 9118f8c6882e0064e5d5bd7797061f37aabec9d7
   - name: char-py
     git-hash: 77eefc1d79ee1ddf27ba6bd288b94d0422523a64
   - name: char-r
-    git-hash: c5f3123ea1e137969a4a13facbd71caf6c7ef3d3
+    git-hash: a9289c4878c99dc5e903fff344ca635d66a44219
   - name: internal
-    git-hash: be05c717d7af48f8fc0d5057b85b3a2e3a2718da
+    git-hash: cf55d90f09a0b8638b9fb19e2ac3ea4ceb41dbb2
   - name: map
-    git-hash: 21c314368fcd08bbf299be93ab35b6f062b57279
+    git-hash: f28201054c3dbeff28a7d627b4b6db10cf34845e
   - name: map-cpp
     git-hash: c71da2a6a892961cdbc9fed7986c86f02d58f496
   - name: map-py
@@ -53,7 +53,7 @@ morloc-dependencies:
   - name: maybe-r
     git-hash: b99ea61daad50deccea88b74b1cf6fa5ece5d203
   - name: random
-    git-hash: fdbb5328d889bf9fc3b1f53a26fd87ebe320d064
+    git-hash: 8aea312d04a87e4ccaae124fc06b542405793c97
   - name: random-cpp
     git-hash: 1a04499e58135e88dc747d12285d86c43635f62d
   - name: random-py
@@ -61,15 +61,15 @@ morloc-dependencies:
   - name: random-r
     git-hash: a34da218fe858a2c3417c51c65fde4cfb4317806
   - name: root
-    git-hash: 1d87956888108665a8b0a84a19e854ac8d7f5a08
+    git-hash: 6db54d01f73e79e744e97f5e7bb9416e49b4a95c
   - name: root-cpp
-    git-hash: 6c89c3630a286c77f17a85b1f5b191e38e85d197
+    git-hash: 1ff1732fda4fd1d0c9241fba040f5133f560c09c
   - name: root-py
-    git-hash: c026c61cdada85947f3af804853cd8c33b5564bd
+    git-hash: dd864fa08f16011ce6fe54eaecd8f45ebc489e6c
   - name: root-r
-    git-hash: 2efcb1603354fa8f6989fcbe8517708c0e8c42b5
+    git-hash: 75980bf1ce712a30363f7109da9549f610228953
   - name: set
-    git-hash: 0e95776934d2f8395d4ae159f2940814f5482d59
+    git-hash: 044074cb06a85fc5af841ff152b151d3bd179454
   - name: set-cpp
     git-hash: 966bd1bd6f493dbcbb2681481b93c3ef123944d0
   - name: set-py
@@ -77,13 +77,13 @@ morloc-dependencies:
   - name: set-r
     git-hash: 7903f40d56cd9d92065d16a47290f00588a8ee8f
   - name: shell
-    git-hash: a03489f3a039f2d9f00d7c10ab73016e5c2bfa11
+    git-hash: 8fd9c17aa84887304a45b0b21ed1ab913d95bcae
   - name: shell-cpp
     git-hash: 95089487cd66ddcd88a12bc8401f3039a4dbff05
   - name: shell-py
     git-hash: 6ad01e25ab2b17e8bf731a86eda950aedfa08431
   - name: table
-    git-hash: f7d5327d3460fba544b09e93e17871c488b47b31
+    git-hash: f7b45e18b9e6fce1dda08b9c18c65c66756b4c30
   - name: table-cpp
     git-hash: 64e0a7ca4aa30785f414276054a0eb16a9ee41d0
   - name: table-py
@@ -91,7 +91,7 @@ morloc-dependencies:
   - name: table-r
     git-hash: bf163035e74560934364145e449d74beabb7afe0
   - name: tensor
-    git-hash: 13f68b02a485f19f953ec40c3c1a637ee9b52eae
+    git-hash: 9f7008e3782d687d5c37670279396d7fe439bf23
   - name: tensor-cpp
     git-hash: f4df5a6908df423b0ea7206529efc3525282ab07
   - name: tensor-py
@@ -107,10 +107,10 @@ morloc-dependencies:
   - name: text-r
     git-hash: 8a2db364a62c6a8da810b5716c221af90bfd5e80
   - name: vector
-    git-hash: 6da23450cc8a5a80321fd0081f0002a11053d87c
+    git-hash: 8a6cfb809501727e185f8f8bca67b784e95334a3
   - name: vector-cpp
     git-hash: fc5f1e8f88424811a500d1c921ef778b06685dca
   - name: vector-py
     git-hash: 6873bec392a2151d1840ca4bc76cf0dfaf11af81
   - name: vector-r
-    git-hash: b859be59ed94b0a481fb20c376cae02cff473c26
+    git-hash: 00522b5ddaf46a7c906bd98f1ab827ea00329295
