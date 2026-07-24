@@ -1,5 +1,5 @@
 name: stdlib
-version: 0.9.0
+version: 0.10.0
 homepage: https://github.com/morloclib/stdlib
 synopsis: Wraps all stdlib modules
 description: A meta-module re-exporting all stdlib modules
@@ -107,10 +107,10 @@ morloc-dependencies:
   - name: text-r
     git-hash: 8a2db364a62c6a8da810b5716c221af90bfd5e80
   - name: vector
-    git-hash: 8a6cfb809501727e185f8f8bca67b784e95334a3
+    git-hash: 8357f00747d4cf681d7ae6c69cd3c55077900851
   - name: vector-cpp
-    git-hash: fc5f1e8f88424811a500d1c921ef778b06685dca
+    git-hash: 8cbfc42dffd6d1f7af4417539c2d0ab3897e5874
   - name: vector-py
-    git-hash: 6873bec392a2151d1840ca4bc76cf0dfaf11af81
+    git-hash: a4ecd76f84caaec57b9a88caf8b3d20c38bf737b
   - name: vector-r
-    git-hash: 00522b5ddaf46a7c906bd98f1ab827ea00329295
+    git-hash: 4d585161b4dcd66631ab3845bf1eb9a7595b0410
