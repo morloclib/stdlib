@@ -29,6 +29,7 @@ import root
 import root-cpp
 import root-py
 import root-r
+import root-rust
 import set
 import set-cpp
 import set-py

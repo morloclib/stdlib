@@ -1,5 +1,5 @@
 name: stdlib
-version: 0.10.0
+version: 0.11.0
 homepage: https://github.com/morloclib/stdlib
 synopsis: Wraps all stdlib modules
 description: A meta-module re-exporting all stdlib modules
@@ -61,13 +61,15 @@ morloc-dependencies:
   - name: random-r
     git-hash: a34da218fe858a2c3417c51c65fde4cfb4317806
   - name: root
-    git-hash: 6db54d01f73e79e744e97f5e7bb9416e49b4a95c
+    git-hash: 396539bde1aefcd0bf8d62cdec902e3ddd267d21
   - name: root-cpp
     git-hash: 1ff1732fda4fd1d0c9241fba040f5133f560c09c
   - name: root-py
     git-hash: dd864fa08f16011ce6fe54eaecd8f45ebc489e6c
   - name: root-r
     git-hash: 75980bf1ce712a30363f7109da9549f610228953
+  - name: root-rust
+    git-hash: 61f6c2adf9c46f7eb7f8d680f6ed9ea5822baf1d
   - name: set
     git-hash: 044074cb06a85fc5af841ff152b151d3bd179454
   - name: set-cpp
@@ -93,7 +95,7 @@ morloc-dependencies:
   - name: tensor
     git-hash: 9f7008e3782d687d5c37670279396d7fe439bf23
   - name: tensor-cpp
-    git-hash: f4df5a6908df423b0ea7206529efc3525282ab07
+    git-hash: 75cc361474a2dc00336bc289f2768cb855fe3628
   - name: tensor-py
     git-hash: c0373471463961d61bb9945d212ea47c5ebcabae
   - name: tensor-r
