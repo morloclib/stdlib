@@ -45,6 +45,7 @@ import tensor
 import tensor-cpp
 import tensor-py
 import tensor-r
+import tensor-rust
 import text
 import text-cpp
 import text-py
@@ -53,3 +54,4 @@ import vector
 import vector-cpp
 import vector-py
 import vector-r
+import vector-rust
