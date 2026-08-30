@@ -1,5 +1,5 @@
 name: stdlib
-version: 0.12.0
+version: 0.13.0
 homepage: https://github.com/morloclib/stdlib
 synopsis: Wraps all stdlib modules
 description: A meta-module re-exporting all stdlib modules
@@ -89,9 +89,9 @@ morloc-dependencies:
   - name: table-cpp
     git-hash: 1817ab4e66f33c3144c4d6519453379e528fa721
   - name: table-py
-    git-hash: 7f91e042bd6c53263d64acdb228eeb8070630875
+    git-hash: 381d39b56ee60988c25c33d6f1fee4749e55b56b
   - name: table-r
-    git-hash: 08d329bf365b11f79ff9075c5c7524c22f15109d
+    git-hash: 76f671ff1276852374f370ee2fbf4a79ffdb9191
   - name: tensor
     git-hash: 6cb7fbe3f3824df8a7e7e8df5a7ac2015ace30e2
   - name: tensor-cpp
