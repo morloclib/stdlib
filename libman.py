@@ -493,7 +493,9 @@ def set_morloc_deps(text: str, entries: List[Tuple[str, str]]) -> str:
         block_lines = ["morloc-deps:"]
         for n, h in entries:
             block_lines.append(f"  - name: {n}")
-            block_lines.append(f"    git-hash: {h}")
+            # Quote the hash so an all-numeric git hash is not read back as a
+            # YAML number (which would silently drop leading zeros).
+            block_lines.append(f'    git-hash: "{h}"')
         block = "\n".join(block_lines) + "\n"
     else:
         block = "morloc-deps: []\n"
@@ -1025,7 +1027,9 @@ def _read_recorded_pins(text: str) -> Dict[str, str]:
     block = block_match.group(0)
     pins: Dict[str, str] = {}
     name_re = re.compile(r"^\s*-\s*name:\s*(\S+)\s*$")
-    hash_re = re.compile(r"^\s*git-hash:\s*(\S+)\s*$")
+    # Accept the hash with or without surrounding quotes (it is now written
+    # quoted, but older files may have it bare).
+    hash_re = re.compile(r'^\s*git-hash:\s*"?([^"\s]+)"?\s*$')
     cur_name: Optional[str] = None
     for line in block.splitlines():
         m_n = name_re.match(line)
