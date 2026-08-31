@@ -1,0 +1,4 @@
+# stdlib
+
+This is the top-level module that manages, tests, and snapshots all the default
+morloc standard library modules across all languages.

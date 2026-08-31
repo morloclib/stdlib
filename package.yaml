@@ -9,7 +9,7 @@ author: "Zebulun Arendsee"
 maintainer: "z@morloc.io"
 github: https://github.com/morloclib/stdlib
 bug-reports: https://github.com/morloclib/stdlib
-morloc-dependencies:
+morloc-deps:
   - name: bits
     git-hash: 3ce5cc2ae8673b3799d0f8dc942a9931e344c162
   - name: bits-cpp
