@@ -4,10 +4,6 @@ import bits
 import bits-cpp
 import bits-py
 import bits-r
-import char
-import char-cpp
-import char-py
-import char-r
 import internal
 import map
 import map-cpp
