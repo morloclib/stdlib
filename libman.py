@@ -4,7 +4,7 @@ libman.py - Manage the morloc standard library.
 
 Replaces lib/stdlib/run-tests.sh with a richer Python tool that
 understands "families" (groups of related modules: e.g. root + root-cpp +
-root-py + root-r) and exposes them as the unit of operation for version
+root-py + root-r + root-rust) and exposes them as the unit of operation for version
 bumps, parallel git commits/pushes, and the freeze command that
 regenerates the `stdlib` umbrella's morloc-deps pin list.
 
@@ -64,7 +64,7 @@ def _D(text: str) -> str:
 # Constants and color codes
 # ---------------------------------------------------------------------------
 
-LANG_SUFFIXES = ("-cpp", "-py", "-r", "-julia")
+LANG_SUFFIXES = ("-cpp", "-py", "-rust", "-r", "-julia")
 DEFAULT_BRANCHES = ("master", "main")
 UMBRELLA_NAME = "stdlib"
 SKIP_DIRS = frozenset({"pools", ".claude", "__pycache__"})
@@ -102,7 +102,7 @@ class Module:
 
     name: str
     path: Path
-    family: str  # the stem (e.g. "root" for root, root-cpp, root-py, root-r)
+    family: str  # the stem (e.g. "root" for root, root-cpp, root-py, root-rust)
     role: str    # "parent" | "lang" | "singleton" | "umbrella"
 
     @property
@@ -571,6 +571,107 @@ def cmd_groups(args: argparse.Namespace) -> int:
             if fam.is_singleton:
                 continue
             show(fam)
+    return 0
+
+
+# ---------------------------------------------------------------------------
+# Subcommand: lint-rust
+# ---------------------------------------------------------------------------
+
+# A sourced .rs file is spliced into the pool crate root with `include!`, so
+# every .rs in a pool shares one namespace: two files declaring the same item
+# is E0428 (or, for a macro, silent shadowing). These patterns recognise the
+# top-level declarations that occupy that namespace. Only column-0 lines are
+# considered -- anything indented is inside a block and cannot collide.
+RUST_ITEM_RE = re.compile(
+    r"^(?:pub(?:\([^)]*\))?\s+)?"
+    r"(?:default\s+)?(?:const\s+)?(?:async\s+)?(?:unsafe\s+)?"
+    r'(?:extern\s+"[^"]*"\s+)?'
+    r"(fn|trait|struct|enum|union|type|const|static)\s+(?:mut\s+)?"
+    r"([A-Za-z_][A-Za-z0-9_]*)"
+)
+RUST_MACRO_RE = re.compile(r"^macro_rules!\s+([A-Za-z_][A-Za-z0-9_]*)")
+RUST_USE_RE = re.compile(r"^use\s+(.+?);")
+
+
+def _use_names(spec: str) -> List[str]:
+    """The names a `use` statement binds in the enclosing namespace."""
+    names: List[str] = []
+    brace = spec.find("{")
+    if brace >= 0:
+        inner = spec[brace + 1 : spec.rfind("}")]
+        leaves = [t.strip() for t in inner.split(",")]
+    else:
+        leaves = [spec.strip()]
+    for leaf in leaves:
+        if not leaf or leaf.endswith("*"):
+            continue
+        if " as " in leaf:
+            names.append(leaf.split(" as ")[-1].strip())
+        else:
+            names.append(leaf.split("::")[-1].strip())
+    return [n for n in names if n and n != "self"]
+
+
+def _rust_items(path: Path) -> List[Tuple[str, str, int]]:
+    """(kind, name, line-number) for every crate-root item in a .rs file."""
+    items: List[Tuple[str, str, int]] = []
+    for lineno, line in enumerate(path.read_text().splitlines(), 1):
+        if not line or line[0].isspace():
+            continue
+        m = RUST_MACRO_RE.match(line)
+        if m:
+            items.append(("macro", m.group(1), lineno))
+            continue
+        m = RUST_USE_RE.match(line)
+        if m:
+            for name in _use_names(m.group(1)):
+                items.append(("use", name, lineno))
+            continue
+        m = RUST_ITEM_RE.match(line)
+        if m:
+            items.append((m.group(1), m.group(2), lineno))
+    return items
+
+
+def cmd_lint_rust(args: argparse.Namespace) -> int:
+    _, modules = discover()
+    targets = sorted(
+        (m for m in modules.values() if m.name.endswith("-rust")),
+        key=lambda m: m.name,
+    )
+    if not targets:
+        print("no -rust modules found")
+        return 0
+
+    # name -> [(module, file, kind, line)]
+    seen: Dict[str, List[Tuple[str, str, str, int]]] = {}
+    nfiles = 0
+    for m in targets:
+        for rs in sorted(m.path.glob("*.rs")):
+            nfiles += 1
+            for kind, name, lineno in _rust_items(rs):
+                seen.setdefault(name, []).append((m.name, rs.name, kind, lineno))
+
+    dups = {n: v for n, v in seen.items() if len(v) > 1}
+    for name in sorted(dups):
+        sites = dups[name]
+        kind = "macro (SILENTLY SHADOWS)" if any(k == "macro" for _, _, k, _ in sites) else "item"
+        print(f"{RED}duplicate {kind}: {BOLD}{name}{NC}")
+        for mod, fname, k, lineno in sites:
+            print(f"    {mod}/{fname}:{lineno}  ({k})")
+
+    print(
+        f"\n{len(targets)} rust module(s), {nfiles} .rs file(s), "
+        f"{len(seen)} crate-root name(s), {len(dups)} duplicate(s)"
+    )
+    if dups:
+        print(
+            f"{YELLOW}Sourced .rs files are include!'d at the pool crate root, so "
+            f"these names collide when both files reach one pool.{NC}"
+        )
+        return 1
+    print(f"{GREEN}no collisions{NC}")
     return 0
 
 
@@ -1275,7 +1376,7 @@ Group / selector
   --all              every module discovered under lib/stdlib/, except
                      the `stdlib` umbrella itself.
   --lang-only        restrict to language-specific implementations
-                     (modules ending in -cpp / -py / -r / -julia).
+                     (modules ending in -cpp / -py / -rust / -r / -julia).
   --match REGEX      select every module whose name matches REGEX.
 
 Exactly one selector form must be given.
@@ -1294,7 +1395,7 @@ def _add_selector_args(p: argparse.ArgumentParser) -> None:
     )
     p.add_argument(
         "--lang-only", action="store_true",
-        help="restrict selection to -cpp / -py / -r / -julia impls",
+        help="restrict selection to -cpp / -py / -rust / -r / -julia impls",
     )
     p.add_argument(
         "--match", metavar="REGEX",
@@ -1312,7 +1413,8 @@ Examples:
   libman.py freeze --check               CI: pins match HEADs?
 
 A "family" is a parent type-only module (e.g. `root`) plus its
-language-specific siblings (`root-cpp`, `root-py`, `root-r`). Family-scoped
+language-specific siblings (`root-cpp`, `root-py`, `root-r`, `root-rust`).
+Family-scoped
 operations (bump / commit / push / add / diff) act on every member at once.
 
 Run any subcommand with --help for its own detailed help and examples.
@@ -1341,7 +1443,7 @@ Run any subcommand with --help for its own detailed help and examples.
         description=_D(
             "Scan lib/stdlib/ and print the discovered module families. "
             "A family is a parent module (bare stem like `root`) plus its "
-            "language-specific siblings (`root-cpp`, `root-py`, `root-r`). "
+            "language-specific siblings (`root-cpp`, `root-py`, `root-rust`). "
             "Each member's role is shown in parentheses: (p) parent, "
             "(l) language impl, (s) singleton. Useful for verifying "
             "discovery before running a destructive op."
@@ -1351,7 +1453,7 @@ Examples:
   libman.py groups                        multi-member families only
   libman.py groups --singletons-included  also show 1-member modules
                                                   like `internal`, `regex`
-  libman.py groups --lang-only            list only -cpp/-py/-r impls,
+  libman.py groups --lang-only            list only -cpp/-py/-rust/-r impls,
                                                   one line per family
 """,
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -1365,6 +1467,27 @@ Examples:
         help="also show 1-member families (default hides them)",
     )
     pg.set_defaults(func=cmd_groups)
+
+    # ----- lint-rust ---------------------------------------------------
+    pl = sp.add_parser(
+        "lint-rust",
+        help="check -rust modules for crate-root name collisions",
+        description=_D(
+            "Every .rs file a morloc module sources is spliced into the pool "
+            "crate root with `include!`, so all of them share one namespace. "
+            "Two files declaring the same fn/trait/struct/type/const/static "
+            "is a hard rustc error (E0428/E0252) once both reach one pool; two "
+            "declaring the same macro_rules! is worse -- one silently shadows "
+            "the other. This scans every `-rust` module's .rs files and exits "
+            "non-zero on any duplicate crate-root name."
+        ),
+        epilog="""\
+Examples:
+  libman.py lint-rust             check every -rust module
+""",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
+    pl.set_defaults(func=cmd_lint_rust)
 
     # ----- status ------------------------------------------------------
     ps = sp.add_parser(
@@ -1402,11 +1525,11 @@ Examples:
             "`morloc make -o test test.loc` and then `./test test`, "
             "checking that the final stdout line is `true`. Modules "
             "without a `test.loc` are skipped. With no arguments, every "
-            "language-specific impl (-cpp / -py / -r) is tested."
+            "language-specific impl (-cpp / -py / -rust / -r) is tested."
         ),
         epilog="""\
 Examples:
-  libman.py test                  test every -cpp/-py/-r module
+  libman.py test                  test every -cpp/-py/-rust/-r module
   libman.py test maybe-py         test a single module
   libman.py test root-py set-cpp  test several modules
   libman.py test -j 4             run up to 4 modules in parallel
