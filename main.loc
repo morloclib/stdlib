@@ -20,7 +20,6 @@ import maybe-r
 import parallel
 import parallel-cpp
 import parallel-py
-import parallel-r
 import parallel-rust
 import random
 import random-cpp
