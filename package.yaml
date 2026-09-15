@@ -1,5 +1,5 @@
 name: stdlib
-version: 0.15.0
+version: 0.16.0
 homepage: https://github.com/morloclib/stdlib
 synopsis: Wraps all stdlib modules
 description: A meta-module re-exporting all stdlib modules
@@ -61,15 +61,15 @@ morloc-deps:
   - name: random-r
     git-hash: "e370f0461f80950e39bacd410b652cc95a4c1412"
   - name: root
-    git-hash: "af2dabe7045594a08e91055766d6e7960f47a931"
+    git-hash: "e021eb61f7a09c30f1fedb770f1682cd3317ad04"
   - name: root-cpp
-    git-hash: "de88a1537ecb0e1a62b6322f6e4dd008b69a7586"
+    git-hash: "42091132816270a8b620a5a382b8ab3211acd132"
   - name: root-py
-    git-hash: "e9a127ef75834287a84af05492b511265c3365bc"
+    git-hash: "4deacfef2fb514bc916bda3819753732d110f9c5"
   - name: root-r
-    git-hash: "413ceeb4d79e4c1d97b644e31ec5e6aa57f22a01"
+    git-hash: "0ca5cb41dce1c2c8e903133fb74c38fb1369200d"
   - name: root-rust
-    git-hash: "18145a51f77d0e2faf2ad66c9cdf4bf57f0c2011"
+    git-hash: "4f76559b280de731539716017f814bbda4880c9d"
   - name: set
     git-hash: "680d650b6265b5b07920538b236807f4a7c25bbb"
   - name: set-cpp
@@ -93,15 +93,15 @@ morloc-deps:
   - name: table-r
     git-hash: "76f671ff1276852374f370ee2fbf4a79ffdb9191"
   - name: tensor
-    git-hash: "df44c960928398eb1f762e15b52a23fbb88ed074"
+    git-hash: "ca7b031dfc1da1f79702c49ae3a23d9134d4f42a"
   - name: tensor-cpp
-    git-hash: "ec0a7ca8562384439103344112835b88f2abcaee"
+    git-hash: "36d974e2854489534be4491e19e8cf1b82c20556"
   - name: tensor-py
-    git-hash: "470825257c18a34948361683abdc4e0e18682456"
+    git-hash: "abaa27932cd954affd813b47f7db6a5d993355c6"
   - name: tensor-r
-    git-hash: "fa627e16e9098b01646388318f886d3b574860ca"
+    git-hash: "64ae670a3fa93b7b88c9e784626a2ac7919bf4e2"
   - name: tensor-rust
-    git-hash: "d72097df0d08e136a8ee983cd1f8c3f1d9b87952"
+    git-hash: "ec46dc65b4cd314184c0f750d93032ae3eeb140b"
   - name: text
     git-hash: "1142b68276f42696573319f8d0ca1eeb414fc2b4"
   - name: text-cpp
@@ -111,12 +111,12 @@ morloc-deps:
   - name: text-r
     git-hash: "55b1065bf259900e3d095339f651eb686e25c397"
   - name: vector
-    git-hash: "7363a15a46296c5df510829a44f18d12b731ac8b"
+    git-hash: "d2e37017721b240f4acc6d3f4a36d41f12ba0c4f"
   - name: vector-cpp
-    git-hash: "a5182245ca0cee64852c21a1f4d55d2c69f4f515"
+    git-hash: "91ddd02fc638f2ee63697536339f51313d41d73e"
   - name: vector-py
-    git-hash: "ee53ec08dbe23d6d86b0b42c66ae19672a5bfa57"
+    git-hash: "401e7a330564010fa6c2ddc2331bd19a6db308eb"
   - name: vector-r
-    git-hash: "700d8921a4a03be8b4956af39c9039e712f015a3"
+    git-hash: "3a7e318d390369c2a68351352ecb41b57a870a74"
   - name: vector-rust
-    git-hash: "d8d4f3a98c29244f0a9d37a7aec89bdf5c3784d3"
+    git-hash: "23c40e187f93dea400507d101cf47a17ab618c50"
