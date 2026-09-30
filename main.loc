@@ -50,6 +50,7 @@ import text
 import text-cpp
 import text-py
 import text-r
+import unittest
 import vector
 import vector-cpp
 import vector-py
