@@ -64,7 +64,7 @@ def _D(text: str) -> str:
 # Constants and color codes
 # ---------------------------------------------------------------------------
 
-LANG_SUFFIXES = ("-cpp", "-py", "-rust", "-r", "-julia")
+LANG_SUFFIXES = ("-cpp", "-py", "-rust", "-r")
 DEFAULT_BRANCHES = ("master", "main")
 UMBRELLA_NAME = "stdlib"
 SKIP_DIRS = frozenset({"pools", ".claude", "__pycache__"})
@@ -1376,7 +1376,7 @@ Group / selector
   --all              every module discovered under lib/stdlib/, except
                      the `stdlib` umbrella itself.
   --lang-only        restrict to language-specific implementations
-                     (modules ending in -cpp / -py / -rust / -r / -julia).
+                     (modules ending in -cpp / -py / -rust / -r).
   --match REGEX      select every module whose name matches REGEX.
 
 Exactly one selector form must be given.
@@ -1395,7 +1395,7 @@ def _add_selector_args(p: argparse.ArgumentParser) -> None:
     )
     p.add_argument(
         "--lang-only", action="store_true",
-        help="restrict selection to -cpp / -py / -rust / -r / -julia impls",
+        help="restrict selection to -cpp / -py / -rust / -r impls",
     )
     p.add_argument(
         "--match", metavar="REGEX",

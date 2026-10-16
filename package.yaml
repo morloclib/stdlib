@@ -1,5 +1,5 @@
 name: stdlib
-version: 0.19.0
+version: 0.20.0
 homepage: https://github.com/morloclib/stdlib
 synopsis: Wraps all stdlib modules
 description: A meta-module re-exporting all stdlib modules
@@ -45,13 +45,13 @@ morloc-deps:
   - name: maybe-r
     git-hash: "50e9164b56c37161518d08521f4497bc62b5e7da"
   - name: parallel
-    git-hash: "b8452b274eaa555ff7bc398058d261d6add497a3"
+    git-hash: "1bd4c77a8b5781431c38d49e33b4e243361bc980"
   - name: parallel-cpp
     git-hash: "117901b339cb6b79a434f33f5c60eb0256d1d360"
   - name: parallel-py
     git-hash: "afa0fd7bf5e6429aec417d16b5700d762db50cb1"
   - name: parallel-rust
-    git-hash: "2411ef5d18c8a8cdd1fe607a3e73a5ef2b23e96b"
+    git-hash: "a5db816be2242c260dabf4bc3da1351ea860dcbd"
   - name: random
     git-hash: "cec08dd5203a6861ad7821ec109e1fd7241f8f87"
   - name: random-cpp
@@ -85,7 +85,7 @@ morloc-deps:
   - name: shell-py
     git-hash: "15944591fa08aa4e6d57872e5248c9ec19670b02"
   - name: table
-    git-hash: "7c39266557c98af42292a4aeea50abdba92eb70c"
+    git-hash: "ea82bdc13de2ac6e53ee948870cd1d25ecf2e384"
   - name: table-cpp
     git-hash: "a7b345591830a2b30cbaa1d624c01f2560a2d583"
   - name: table-py
