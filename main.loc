@@ -37,6 +37,11 @@ import set-r
 import shell
 import shell-cpp
 import shell-py
+import stream
+import stream-cpp
+import stream-py
+import stream-r
+import stream-rust
 import table
 import table-cpp
 import table-py

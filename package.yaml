@@ -1,5 +1,5 @@
 name: stdlib
-version: 0.21.0
+version: 0.22.0
 homepage: https://github.com/morloclib/stdlib
 synopsis: Wraps all stdlib modules
 description: A meta-module re-exporting all stdlib modules
@@ -13,7 +13,7 @@ morloc-deps:
   - name: bits
     git-hash: "54d38b2c9798bb8f81e21352aa3b1ece8d4931d5"
   - name: bits-cpp
-    git-hash: "b1bed5d4d4ced0602d856515d7f1a6ed86de50fc"
+    git-hash: "3388c127314594cdfe6e3d9da9a8e23043d031ae"
   - name: bits-py
     git-hash: "2f9f414e62c402bca0e1deb79f177b8587692013"
   - name: bits-r
@@ -45,13 +45,13 @@ morloc-deps:
   - name: maybe-r
     git-hash: "50e9164b56c37161518d08521f4497bc62b5e7da"
   - name: parallel
-    git-hash: "1bd4c77a8b5781431c38d49e33b4e243361bc980"
+    git-hash: "d2e3da7ce57f09283ba2fc2d357ca8f2dcc4c03a"
   - name: parallel-cpp
-    git-hash: "508fa4f6c19ac15ffef0dbdd24d80da4f3105e98"
+    git-hash: "53cf02a9b69133b0eaf0c438e36aeb0891d342fb"
   - name: parallel-py
-    git-hash: "afa0fd7bf5e6429aec417d16b5700d762db50cb1"
+    git-hash: "94cef91cf78339a1fa5ed57d3f0c4ba18a509572"
   - name: parallel-rust
-    git-hash: "a5db816be2242c260dabf4bc3da1351ea860dcbd"
+    git-hash: "7473a30ba54f281d2b9c040d0c4e756967444ba2"
   - name: random
     git-hash: "cec08dd5203a6861ad7821ec109e1fd7241f8f87"
   - name: random-cpp
@@ -65,7 +65,7 @@ morloc-deps:
   - name: root-cpp
     git-hash: "74e87492d41ffec0ee2c10994c7e3961c4e5e184"
   - name: root-py
-    git-hash: "400294ebac3335239d75a5f3f0a245308282ceae"
+    git-hash: "654a43e16dcd0315250a6690f3d83750ae9bfa6a"
   - name: root-r
     git-hash: "cbac718ba1c02bd76d9847ae97ce4ace6a88b484"
   - name: root-rust
@@ -84,14 +84,24 @@ morloc-deps:
     git-hash: "a12ac97362ff8d5c0b8e5c058d3d717cb3566f0a"
   - name: shell-py
     git-hash: "15944591fa08aa4e6d57872e5248c9ec19670b02"
+  - name: stream
+    git-hash: "7b61c59c4d398a4f5a26408c91ff05b12dc6ceae"
+  - name: stream-cpp
+    git-hash: "43eee1811c0fbfe5e1ebf2ad4266fc616897f309"
+  - name: stream-py
+    git-hash: "edcb1294d9ecd78120cdb166c4742eb8faa2cfbf"
+  - name: stream-rust
+    git-hash: "6bb4dc45acda283d076b1aed6ce7374ec0a36af2"
   - name: table
-    git-hash: "ea82bdc13de2ac6e53ee948870cd1d25ecf2e384"
+    git-hash: "04feb05d89f1aebc3ffe1b541a2db6faad5abd60"
   - name: table-cpp
     git-hash: "a7b345591830a2b30cbaa1d624c01f2560a2d583"
   - name: table-py
     git-hash: "baab29d6473a79dad2d598a8a00f46e4a4d668ee"
   - name: table-r
     git-hash: "e3e81edf1eba1095fc16295f496f94eebcc67295"
+  - name: table-rust
+    git-hash: "c88a2b2e109b95c19e1c7c39f8cbeabdbd6193ee"
   - name: tensor
     git-hash: "c59b7bac2ff956442ccb222be46eb510213ee0eb"
   - name: tensor-cpp
