@@ -1,5 +1,5 @@
 name: stdlib
-version: 0.22.0
+version: 0.23.0
 homepage: https://github.com/morloclib/stdlib
 synopsis: Wraps all stdlib modules
 description: A meta-module re-exporting all stdlib modules
@@ -85,11 +85,13 @@ morloc-deps:
   - name: shell-py
     git-hash: "15944591fa08aa4e6d57872e5248c9ec19670b02"
   - name: stream
-    git-hash: "7b61c59c4d398a4f5a26408c91ff05b12dc6ceae"
+    git-hash: "30273ed3ac171a3a7c0523b00902689b2f1e8eb5"
   - name: stream-cpp
     git-hash: "43eee1811c0fbfe5e1ebf2ad4266fc616897f309"
   - name: stream-py
     git-hash: "edcb1294d9ecd78120cdb166c4742eb8faa2cfbf"
+  - name: stream-r
+    git-hash: "081c5d14ad686a475e8fa240fb8e8e33f5b4bdeb"
   - name: stream-rust
     git-hash: "6bb4dc45acda283d076b1aed6ce7374ec0a36af2"
   - name: table
