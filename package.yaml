@@ -1,5 +1,5 @@
 name: stdlib
-version: 0.25.0
+version: 0.26.0
 homepage: https://github.com/morloclib/stdlib
 synopsis: Wraps all stdlib modules
 description: A meta-module re-exporting all stdlib modules
@@ -61,15 +61,15 @@ morloc-deps:
   - name: random-r
     git-hash: "d411f164c301f94f39246103a57fb9ade6546f4b"
   - name: root
-    git-hash: "c2c70262cac8427dd1718b6325768d64df989e5a"
+    git-hash: "e63e503c3bda5743aa5a46db572d0ea519500dc2"
   - name: root-cpp
-    git-hash: "e7e5940990a870373ff1c5c12022b028a6ef1fea"
+    git-hash: "7cffdd1678dfbb89838b7525ffad176b640d94b1"
   - name: root-py
-    git-hash: "4edf82091d4819d888ef7c5a5422216d42e71988"
+    git-hash: "74488e8ab57e546b508f81bbc617b9e50b821373"
   - name: root-r
-    git-hash: "641be6ffbef8b3af78b5d599efb27cafeda5b59a"
+    git-hash: "fdb45fa6135da1c00ff65a841ede50876e0af1af"
   - name: root-rust
-    git-hash: "d838fd4feaf579e6e54372ef432003be14109492"
+    git-hash: "f47f5508c692f83a89c1e87c3ce375591bf4ac05"
   - name: set
     git-hash: "2f0ad8f9ff806804c4edee6c21747a992ccea160"
   - name: set-cpp
@@ -122,6 +122,10 @@ morloc-deps:
     git-hash: "bea0c66b62566b41d88ac1a1afa58382cd52e730"
   - name: text-r
     git-hash: "55b1065bf259900e3d095339f651eb686e25c397"
+  - name: time
+    git-hash: "eace33525f871de42eb7889d02bacb012c465650"
+  - name: time-py
+    git-hash: "7561f00c1130f7a3b29928278eb05287b3334613"
   - name: unittest
     git-hash: "b7953071091111c9c6f4c024c220f86b50383859"
   - name: vector
