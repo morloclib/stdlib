@@ -5,10 +5,10 @@ import bits-cpp
 import bits-py
 import bits-r
 import internal
-import map
-import map-cpp
-import map-py
-import map-r
+import map (Map)
+import map-cpp (Map)
+import map-py (Map)
+import map-r (Map)
 import math
 import math-cpp
 import math-py
@@ -30,10 +30,10 @@ import root-cpp
 import root-py
 import root-r
 import root-rust
-import set
-import set-cpp
-import set-py
-import set-r
+import set (Set)
+import set-cpp (Set)
+import set-py (Set)
+import set-r (Set)
 import shell
 import shell-cpp
 import shell-py
@@ -46,6 +46,8 @@ import table
 import table-cpp
 import table-py
 import table-r
+import time
+import time-py
 import tensor
 import tensor-cpp
 import tensor-py
